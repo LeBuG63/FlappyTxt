@@ -20,7 +20,7 @@ flappy_create(int nScore) {
 	purge(stdin);
 
 	if(defaultHeight > MAX_HEIGHT || defaultHeight < 0) {
-		defaultHeight = (int)MAX_HEIGHT >> 1;	// Si la hauteur par défaut est plus grande que la hauteur max, alors on l'a divise par 2 pour que le flappy soit centré
+		defaultHeight = (int)MAX_HEIGHT >> 1;	// Si la hauteur par dÃ©faut est plus grande que la hauteur max, alors on l'a divise par 2 pour que le flappy soit centrÃ©
 	}
 
 	newFlappy->height = defaultHeight;
@@ -47,11 +47,11 @@ flappy_collide_with_pipe(t_flappy *flappy, const t_pipe *pipe) {
 
 void
 flappy_move(t_flappy *flappy, int newHeight) {
-	if(newHeight > MAX_HEIGHT) { 	// PAN, UN NUAGE
+	if(newHeight > MAX_HEIGHT) {
 		flappy->isHit = true;
 		return;
 	}
-	if(newHeight < 0) {				// PAN, UNE PAQUERETE
+	if(newHeight < 0) {
 		flappy->isHit = true;
 		return;
 	}

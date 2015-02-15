@@ -6,8 +6,6 @@ static long seed;
 
 long
 ran(void) {
-
-
 	seed *= 125;
 	seed -= (seed/2796203) * 2796203;
 
@@ -16,13 +14,13 @@ ran(void) {
 
 int
 rnd(int range) {
-	return range < 1 ? 0 : ((ran() + ran())&0x7fffffffl) % range; // Si vous trouvez la référence <3
+	return range < 1 ? 0 : ((ran() + ran())&0x7fffffffl) % range; // Si vous trouvez la rÃ©fÃ©rence <3
 }
 
 void
 wait(unsigned int delay) {
     time_t 	start,
-			end;
+		end;
 
     start=clock();
 
